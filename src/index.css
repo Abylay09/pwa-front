@@ -11,3 +11,65 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.layout{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main{
+  flex: 1;
+}
+
+.logo{
+  width: 48px;
+  height: 48px;
+}
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.product img{
+  height: 200px;
+  object-fit: contain;
+}
+.product-body{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.product-body h3{
+  flex: 1;
+}
+
+
+.product-bottom{
+  padding: 6px 4px;
+}
+.product-body p {
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  .product-container{
+    padding: 0 12px;
+  }
+  .sidebar{
+    display: none;
+  }
+  .product{
+    width: 100%;
+  }
+}
